@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.xiahl</groupId>
+    <artifactId>springboot-temp</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>springboot-temp</name>
+    <description>springboot 模板</description>
+
+    <!--springboot 模块管理-->
+    <modules>
+        <module>web-protal</module>
+        <module>inner-intergration</module>
+    </modules>
+
+    <!--springboot jar版本管理-->
+    <properties>
+        <java.version>1.8</java.version>
+        <hutool.all.version>5.6.3</hutool.all.version>
+        <spring-boot-starter-web.version>2.4.5</spring-boot-starter-web.version>
+        <spring-boot-starter-tomcat.version>2.4.5</spring-boot-starter-tomcat.version>
+        <spring-boot-starter-test.version>2.4.5</spring-boot-starter-test.version>
+    </properties>
+
+    <!--springboot的父模块管理的jar-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.all.version}</version>
+            </dependency>
+            <!--springboot 核心的依赖的包-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-starter-web.version}</version>
+            </dependency>
+
+            <!--springboot tomcat 依赖的包-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+                <version>${spring-boot-starter-tomcat.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!--springboot 测试的依赖包-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-starter-test.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+
+    <!--spring 父模块实际使用的jar包-->
+    <dependencies>
+        <!--springboot 核心的依赖的包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--springboot tomcat 依赖的包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--springboot 测试的依赖包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!--多环境配置-->
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <activatedProperties>local</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <!-- 环境标识，需要与配置文件的名称相对应 -->
+                <activatedProperties>dev</activatedProperties>
+            </properties>
+            <activation>
+                <!-- 默认环境 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <activatedProperties>test</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <activatedProperties>prod</activatedProperties>
+            </properties>
+        </profile>
+    </profiles>
+
+
+    <!--插件的包-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
