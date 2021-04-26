@@ -15,5 +15,8 @@
     <name>inner-intergration</name>
     <description>内部支撑工具</description>
 
+    <modules>
+        <module>api-common</module>
+    </modules>
 
 </project>

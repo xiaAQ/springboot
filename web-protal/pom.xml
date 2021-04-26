@@ -17,7 +17,7 @@
     <artifactId>web-protal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>web-protal</name>
-    <description>Demo project for Spring Boot</description>
+    <description>门户模块</description>
 
     <dependencies>
         <dependency>

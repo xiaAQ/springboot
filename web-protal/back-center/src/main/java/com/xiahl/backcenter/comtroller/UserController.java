@@ -10,6 +10,7 @@ public class UserController {
 
     @GetMapping("/sayHello")
     public String getHello() {
+        System.out.println("你好呀  ....springboot");
         return "hello world";
     }
 }
