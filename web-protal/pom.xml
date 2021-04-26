@@ -19,11 +19,5 @@
     <name>web-protal</name>
     <description>门户模块</description>
 
-    <dependencies>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>

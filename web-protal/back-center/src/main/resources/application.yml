@@ -1,3 +1,44 @@
+spring:
+  application:
+    name: java-platform-template
+#  autoconfigure:
+#    exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+  profiles:
+    active: "@activatedProperties@"
+    include:
+    - config
+    - jwt
+    - mybatis
+    - export
+    - nacos
+    - security
+  resources:
+    add-mappings: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: -1
+      max-request-size: -1
+
+  http:
+    encoding:
+      enabled: true
+      charset: utf-8
+      force: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+
 server:
   port: 8080
+  max-http-header-size: 8192
 
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

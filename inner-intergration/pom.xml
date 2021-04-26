@@ -17,6 +17,7 @@
 
     <modules>
         <module>api-common</module>
+        <module>swagger-spring-boot-starter</module>
     </modules>
 
 </project>

@@ -1,4 +1,4 @@
-package com.xiahl.backcenter.comtroller;
+package com.xiahl.web.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

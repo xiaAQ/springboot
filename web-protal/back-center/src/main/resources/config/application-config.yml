@@ -1,0 +1,24 @@
+knife4j:
+  enable: true
+  cors: false
+  documents:
+    locations: classpath:markdown/*
+  setting:
+    enableFooter: true
+
+scheduling:
+  enabled: true
+
+spring:
+  crypto:
+    # SM4（国密4） BASE64
+    key: CKrCef6mDUCpq4/ur/x4IA==
+    charset: UTF-8
+    request:
+      decrypt:
+        enabled: true
+    response:
+      encrypt:
+        enabled: true
+        # 只对data数据加密
+        only-data: false

@@ -1,4 +1,4 @@
-package com.xiahl.backcenter;
+package com.xiahl.web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

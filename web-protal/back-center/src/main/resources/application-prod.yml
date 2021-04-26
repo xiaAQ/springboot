@@ -1,0 +1,48 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        register-enabled: true
+        group: PROD_GROUP
+  datasource:
+    druid:
+      stat-view-servlet:
+        loginUsername: admin
+        loginPassword: Yuancheng2020!
+        enabled: true
+        url-pattern: /druid/*
+    dynamic:
+      druid:
+        max-wait: 60000
+        test-while-idle: true
+        validation-query: "select 'x'"
+        validation-query-timeout: 5
+        stat:
+          slow-sql-millis: 5000
+          log-slow-sql: true
+      primary: master
+      datasource:
+        master:
+          url: jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&useSSL=false&allowMultiQueries=true&autoReconnect=true&serverTimezone=GMT%2B8&useAffectedRows=true
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: root
+    database: 0
+    ssl: false
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 1
+
+  elasticsearch:
+    rest:
+      uris:
+        - http://127.0.0.1:9200
+
+knife4j:
+  production: true

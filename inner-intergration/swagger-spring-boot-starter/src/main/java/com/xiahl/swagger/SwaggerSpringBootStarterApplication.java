@@ -1,13 +1,11 @@
-package com.xiahl.backcenter;
+package com.xiahl.swagger;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackCenterApplication {
-
+public class SwaggerSpringBootStarterApplication {
     public static void main(String[] args) {
-        SpringApplication.run(BackCenterApplication.class, args);
+        SpringApplication.run(SwaggerSpringBootStarterApplication.class, args);
     }
-
 }

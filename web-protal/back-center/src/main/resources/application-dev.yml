@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    master:
+      url: jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&useSSL=false&allowMultiQueries=true&autoReconnect=true&serverTimezone=GMT%2B8&useAffectedRows=true
+      username: root
+      password: root
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    password: root
+#    database: 0
+#    ssl: false
+#    lettuce:ini
+#    pool:
+#      max-active: 8
+#      max-idle: 8
+#      min-idle: 0
+#
+#  elasticsearch:
+#    rest:
+#      uris:
+#        - http://127.0.0.1:9200
