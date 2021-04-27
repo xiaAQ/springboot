@@ -14,7 +14,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>inner-intergration</name>
     <description>内部支撑工具</description>
-
+    <packaging>pom</packaging>
     <modules>
         <module>api-common</module>
         <module>swagger-spring-boot-starter</module>

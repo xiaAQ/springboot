@@ -60,7 +60,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .host(InetAddress.getLocalHost().getHostAddress() + ":" + serverPort)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.xiahl.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.xiahl"))
                 .paths(PathSelectors.any()).build()
 //                .alternateTypeRules(
 //                        AlternateTypeRules.newRule(typeResolver.resolve(Callable.class,
@@ -77,7 +77,7 @@ public class SwaggerConfig {
                 .title("Java模板平台")
                 .description("Java SpringBoot 模板项目")
                 .termsOfServiceUrl("https://www.yczcjk.com/")
-                .contact(new Contact("DoyuTu", "https://github.com/DoyuTu", "859898972@qq.com"))
+                .contact(new Contact("xiahl", "https://github.com/xiaQ", "1169555812@qq.com"))
                 .version("1.0.0")
                 .build();
     }

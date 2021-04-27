@@ -12,7 +12,7 @@
     <groupId>com.xiahl</groupId>
     <artifactId>springboot-temp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>springboot-temp</name>
     <description>springboot 模板</description>
 
@@ -25,6 +25,7 @@
     <!--springboot jar版本管理-->
     <properties>
         <java.version>1.8</java.version>
+        <maven-compiler-plugin.encoding>UTF-8</maven-compiler-plugin.encoding>
         <hutool.all.version>5.6.3</hutool.all.version>
         <spring-boot-starter-web.version>2.4.5</spring-boot-starter-web.version>
         <spring-boot-starter-tomcat.version>2.4.5</spring-boot-starter-tomcat.version>
@@ -81,23 +82,24 @@
                 <version>${swagger-ui.version}</version>
                 <optional>true</optional>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>com.github.xiaoymin</groupId>-->
-<!--                <artifactId>swagger-bootstrap-ui</artifactId>-->
-<!--                <version>${swagger-bootstrap-ui.version}</version>-->
-<!--            </dependency>-->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${knife4j-spring-boot-starter.version}</version>
             </dependency>
-            <!--springboot注解-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.github.xiaoymin</groupId>-->
+            <!--                <artifactId>swagger-bootstrap-ui</artifactId>-->
+            <!--                <version>${swagger-bootstrap-ui.version}</version>-->
+            <!--            </dependency>-->
+            <!--springboot注解验证-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-validation</artifactId>
                 <version>${spring-boot-starter-validation.version}</version>
                 <optional>true</optional>
             </dependency>
+
             <!--数据库链接池配置-->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -165,10 +167,40 @@
 
     <!--插件的包-->
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>${maven-compiler-plugin.encoding}</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
