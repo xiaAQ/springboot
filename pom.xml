@@ -20,6 +20,8 @@
     <modules>
         <module>web-protal</module>
         <module>inner-intergration</module>
+        <module>file-center</module>
+        <module>business-center</module>
     </modules>
 
     <!--springboot jar版本管理-->
@@ -36,6 +38,13 @@
         <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
         <knife4j-spring-boot-starter.version>3.0.2</knife4j-spring-boot-starter.version>
         <druid-spring-boot-starter.version>1.2.4</druid-spring-boot-starter.version>
+        <file-center.version>0.0.1-SNAPSHOT</file-center.version>
+        <inner-intergration.version>0.0.1-SNAPSHOT</inner-intergration.version>
+        <api-common.version>0.0.1-SNAPSHOT</api-common.version>
+        <swagger-spring-boot-starter.version>0.0.1-SNAPSHOT</swagger-spring-boot-starter.version>
+        <web-protal.version>0.0.1-SNAPSHOT</web-protal.version>
+        <back-center.version>0.0.1-SNAPSHOT</back-center.version>
+        <easyexcel.version>2.2.6</easyexcel.version>
     </properties>
 
     <!--springboot的父模块管理的jar-->
@@ -110,27 +119,37 @@
             <dependency>
                 <groupId>com.xiahl</groupId>
                 <artifactId>back-center</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${back-center.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.xiahl</groupId>
                 <artifactId>web-protal</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${web-protal.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.xiahl</groupId>
                 <artifactId>inner-intergration</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${inner-intergration.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.xiahl</groupId>
                 <artifactId>api-common</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${api-common.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.xiahl</groupId>
                 <artifactId>swagger-spring-boot-starter</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${swagger-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xiahl</groupId>
+                <artifactId>file-center</artifactId>
+                <version>${file-center.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
             </dependency>
         </dependencies>
 
