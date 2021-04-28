@@ -13,7 +13,7 @@
     <artifactId>api-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>api-common</name>
-    <description>Demo project for Spring Boot</description>
+    <description>公共模块_所有的模块都要引入</description>
 
     <dependencies>
         <dependency>

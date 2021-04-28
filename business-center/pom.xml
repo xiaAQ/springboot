@@ -15,6 +15,11 @@
     <name>business-center</name>
     <description>Demo project for Spring Boot</description>
 
+    <modules>
+        <module>sys-center</module>
+        <module>user-center</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>com.xiahl</groupId>
