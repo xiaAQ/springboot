@@ -22,6 +22,7 @@
         <module>inner-intergration</module>
         <module>file-center</module>
         <module>business-center</module>
+        <module>job-center</module>
     </modules>
 
     <!--springboot jar版本管理-->
