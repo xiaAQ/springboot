@@ -3,23 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.xiahl</groupId>
     <parent>
         <groupId>com.xiahl</groupId>
-        <artifactId>springboot-temp</artifactId>
+        <artifactId>business-center</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
-    <groupId>com.xiahl</groupId>
-    <artifactId>business-center</artifactId>
+    <artifactId>spring-security</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>business-center</name>
+    <name>spring-security</name>
     <description>Demo project for Spring Boot</description>
-
-    <modules>
-        <module>sys-center</module>
-        <module>user-center</module>
-        <module>spring-security</module>
-    </modules>
 
     <dependencies>
         <dependency>
