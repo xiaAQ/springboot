@@ -18,6 +18,7 @@
     <modules>
         <module>api-common</module>
         <module>swagger-spring-boot-starter</module>
+        <module>mybatis-core</module>
     </modules>
 
 </project>
