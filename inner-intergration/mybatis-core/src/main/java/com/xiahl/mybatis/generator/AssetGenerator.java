@@ -56,7 +56,7 @@ public class AssetGenerator {
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setUrl(url);
         // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.jdbc.Driver"); //如果是oracle的话,要切换
         dsc.setUsername(username);
         dsc.setPassword(password);
         mpg.setDataSource(dsc);
