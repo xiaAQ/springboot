@@ -23,7 +23,7 @@ public class AssetGenerator {
 //            "YCA_TRADEMARK_PATENT_RIGHT_OBLIGOR",
 //            "YCA_CONSTRUCT_QUALIFICATION",
 //            "YCA_CONSTRUCT_QUALIFICATION_CERTIFICATE",
-            "xiaoming"
+            "sys_user"
     };
 
     private static final boolean override = true;
@@ -65,7 +65,7 @@ public class AssetGenerator {
         PackageConfig pc = new PackageConfig();
 //        pc.setModuleName(scanner("模块名"));
         pc.setParent("");
-        String parentPackage = "com.yc.common.";
+        String parentPackage = "com.yc.xiahl.";
         pc.setEntity(parentPackage + "entity.po" + packageName);
         pc.setService(parentPackage + "dao" + packageName);
         pc.setServiceImpl(parentPackage + "dao" + packageName + ".impl");
